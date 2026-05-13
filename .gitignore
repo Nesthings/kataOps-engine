@@ -1,0 +1,16 @@
+# Virtual enviromens
+
+venv/
+.venv/
+__pycache/__
+.pytest_cache/
+*.pyc   
+
+# Secrets
+.env
+
+# Installers & binaries
+*.exe
+*.zip
+aws/
+

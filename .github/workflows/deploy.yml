@@ -32,11 +32,11 @@ jobs:
           env:
             ECR_REGISTRY: ${{steps.login-ecr.outputs.registry}} 
             ECR_REPOSITORY: kataops-engine
-            IMAGE-TAG: v1
+            IMAGE_TAG: v1
           run: 
             docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . 
             docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-            
+
         - name: Update ECS Service
           run: |
            aws ecs update-service --cluster kataops-cluster --service kataops-service --force-new-deployment

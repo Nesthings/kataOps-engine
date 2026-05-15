@@ -1,6 +1,9 @@
 fastapi
 uvicorn
 pydantic
+aiofiles
+sqlalchemy
+psycopg2-binary
 iniconfig==2.3.0
 packaging==26.2
 pluggy==1.6.0

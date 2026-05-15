@@ -1,35 +1,51 @@
-# Descargamos imagen oficial super ligera que contiene Python
+# Frontend build 
+FROM node:20-slim AS frontend-build
+WORKDIR /frontend
+COPY frontend/package*.json ./
+RUN npm install
+COPY frontend/ ./
+RUN npm run build
+
+
+# Downloading the official and super-light image with Python pre-installed
 FROM  python:3.12-slim
 
-# Variable de entorno para evitar almacenar caché .pyc
+# Env variable to avoid store .pyc cache
 ENV PYTHONDONTWRITEBYTECODE=1
 
-# Variable de entrno para asegurarnos que los logs se muestren en tiempo real
+# Env var to make sure the logs are shown in real time
 ENV PYTHONUNBUFFERED=1
 
-# Variable de entorno para normalizar el timezone
+# Env var to normalize the timezone
 ENV TZ=UTC
 
-# Creamos el directorio de trabajo en el contenedor
+# Create the workspace in the container
 WORKDIR /code
 
-# Copiamos el archivo de requerimientos en el directorio actual
+# Copy the reqs file into the current directory
 COPY requirements.txt .
 
-# Instalamoslos requerimientos
+# Install requirements
 RUN pip install --no-cache-dir -r requirements.txt
 
-#Copiamos el contenido de la app en la nueva carpeta que creamos
+# Copy the app content in a new created folder inside /code
 COPY ./app /code/app
 
-# Creamos un usuario llamado appuser, sin contrasena ni datos adicionales 
-RUN adduser --disabled-password --gecos '' appuser
+# Create and reference the dist folder
+RUN mkdir -p /code/frontend/dist
+COPY --from=frontend-build /frontend/dist /code/frontend/dist
 
-# Cambiamos al usuario recien creado
+# Create a user named aduser, no pass, no additional questions
+RUN adduser --disabled-password --gecos '' appuser
+RUN chown -R appuser:appuser /code 
+
+# Change to the just created user
 USER appuser
 
-# Informamos que el puerto a utilizar es el 8000
+
+# Inform that the port we will be using is: 8000
 EXPOSE 8000
 
-# Ejecutamos el comando de inicialización del backend en Exec form para evitar crasheos
+# Execute the initialization command in "Exec form" to avoid crashes
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+

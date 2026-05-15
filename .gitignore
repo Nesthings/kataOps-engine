@@ -1,10 +1,11 @@
-# Virtual enviromens
+# Virtual enviroments / not desired routes
 
 venv/
 .venv/
 __pycache/__
 .pytest_cache/
 *.pyc   
+aws/
 
 # Secrets
 .env
@@ -12,5 +13,4 @@ __pycache/__
 # Installers & binaries
 *.exe
 *.zip
-aws/
 

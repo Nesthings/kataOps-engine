@@ -25,7 +25,7 @@ KataOps Engine is a portfolio-grade demonstration of modern cloud engineering, o
 
 The application takes three classical algorithmic challenges (**katas**) and exposes them through a typed Python API and a reactive frontend, deployed end-to-end on AWS via a fully automated pipeline. Every piece of infrastructure is described in code, every commit is gated by tests, and every artifact is built and shipped without manual intervention.
 
-> **Live deployment** → [http://http://52.91.154.57:8000//](http://http://52.91.154.57:8000/)
+> **Live deployment** → [http://http://52.91.154.57:8000//](http://52.91.154.57:8000/)
 
 ---
 

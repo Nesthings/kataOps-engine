@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="http://98.93.55.14:8000/"><img src="https://img.shields.io/badge/live%20demo-online-brightgreen?style=for-the-badge" alt="Live demo"></a>
+  <a href="http://http://52.91.154.57:8000//"><img src="https://img.shields.io/badge/live%20demo-online-brightgreen?style=for-the-badge" alt="Live demo"></a>
   <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI/CD">
   <img src="https://img.shields.io/badge/auth-OIDC-185FA5?style=for-the-badge&logo=openid&logoColor=white" alt="OIDC auth">
@@ -25,7 +25,7 @@ KataOps Engine is a portfolio-grade demonstration of modern cloud engineering, o
 
 The application takes three classical algorithmic challenges (**katas**) and exposes them through a typed Python API and a reactive frontend, deployed end-to-end on AWS via a fully automated pipeline. Every piece of infrastructure is described in code, every commit is gated by tests, and every artifact is built and shipped without manual intervention.
 
-> **Live deployment** → [http://98.93.55.14:8000/](http://98.93.55.14:8000/)
+> **Live deployment** → [http://http://52.91.154.57:8000//](http://http://52.91.154.57:8000//)
 
 ---
 

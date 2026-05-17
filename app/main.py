@@ -37,7 +37,9 @@ class WordsModel(BaseModel):
 # - 1. FRONTEND CONFIG -
 BASE_DIR = "/code"
 FRONTEND_DIST = os.path.join(BASE_DIR, "frontend", "dist")
-app.mount("/assets", StaticFiles(directory=os.path.join(FRONTEND_DIST, "assets")), name="assets")
+_assets_dir = os.path.join(FRONTEND_DIST, "assets")
+if os.path.isdir(_assets_dir):
+    app.mount("/assets", StaticFiles(directory=_assets_dir), name="assets")
 
 # - 2. API ENDPOINTS -
 

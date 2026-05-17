@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="http://http://52.91.154.57:8000//"><img src="https://img.shields.io/badge/live%20demo-online-brightgreen?style=for-the-badge" alt="Live demo"></a>
+  <a href="http://52.91.154.57:8000//"><img src="https://img.shields.io/badge/live%20demo-online-brightgreen?style=for-the-badge" alt="Live demo"></a>
   <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI/CD">
   <img src="https://img.shields.io/badge/auth-OIDC-185FA5?style=for-the-badge&logo=openid&logoColor=white" alt="OIDC auth">

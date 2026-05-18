@@ -218,7 +218,7 @@ To run the project locally with Docker:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/kataops-engine.git
+git clone https://github.com/Nesthings/kataops-engine.git
 cd kataops-engine
 
 # 2. Build the multistage image
